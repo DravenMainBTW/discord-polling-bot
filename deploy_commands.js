@@ -5,8 +5,16 @@ import CONFIG from "./config_variables.js";
 
 const commands = [
   new SlashCommandBuilder()
-    .setName("ping")
-    .setDescription("Replies with pong!"),
+    .setName("createpoll")
+    .setDescription("Creates a new poll"),
+  ,
+  new SlashCommandBuilder()
+    .setName("closepoll")
+    .setDescription("Closes the current poll"),
+  ,
+  new SlashCommandBuilder()
+    .setName("vote")
+    .setDescription("Votes In Current Poll"),
 ];
 
 const rest = new REST({ version: "9" }).setToken(CONFIG.DISCORD_TOKEN);
@@ -17,5 +25,5 @@ rest
   })
   .then(() => console.log("=== REGISTERED COMMANDS ==="))
   .catch((error) => {
-    console.log("===", error, "===");
+    console.log(error);
   });

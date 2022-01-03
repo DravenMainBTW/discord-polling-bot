@@ -12,7 +12,7 @@ client.once("ready", () => {
 // On Error
 client.on("error", (error) => {
   console.log(`=== ERROR ===`);
-  console.log("===", error, "===");
+  console.log(error);
 });
 
 client.on("interactionCreate", async (interaction) => {
