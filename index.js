@@ -15,4 +15,6 @@ client.on("error", (error) => {
   console.log("===", error, "===");
 });
 
+console.log(CONFIG);
+
 client.login(CONFIG.DISCORD_TOKEN);
