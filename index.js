@@ -15,6 +15,14 @@ client.on("error", (error) => {
   console.log("===", error, "===");
 });
 
-console.log(CONFIG);
+client.on("interactionCreate", async (interaction) => {
+  if (interaction.isCommand()) {
+    const { commandName } = interaction;
+
+    if (commandName === "ping") {
+      await interaction.reply("Pong!");
+    }
+  }
+});
 
 client.login(CONFIG.DISCORD_TOKEN);
