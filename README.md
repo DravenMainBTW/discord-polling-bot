@@ -1,2 +1,2 @@
 # discord-polling-bot
-Discord bot made with Python that allows owner to create multi option polls.
+Discord bot made with JavaScript that allows owner to create multi option polls.
