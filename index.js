@@ -1,6 +1,6 @@
 // Required imports
 import { Client, Intents } from "discord.js";
-import CONFIG from "./config_variables";
+import CONFIG from "./config_variables.js";
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
