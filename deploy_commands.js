@@ -7,11 +7,9 @@ const commands = [
   new SlashCommandBuilder()
     .setName("createpoll")
     .setDescription("Creates a new poll"),
-  ,
   new SlashCommandBuilder()
     .setName("closepoll")
     .setDescription("Closes the current poll"),
-  ,
   new SlashCommandBuilder()
     .setName("vote")
     .setDescription("Votes In Current Poll"),
