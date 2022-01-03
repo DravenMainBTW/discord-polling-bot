@@ -1,0 +1,16 @@
+{
+  "name": "discord-polling-bot",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Discord bot written in JS.",
+  "main": "index.js",
+  "repository": "https://github.com/DravenMainBTW/discord-polling-bot.git",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "Daniel <danielcrewe1999@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.5.0"
+  }
+}
