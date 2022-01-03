@@ -2,6 +2,9 @@
   "name": "discord-polling-bot",
   "type": "module",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.13.1"
+  },
   "description": "Discord bot written in JS.",
   "main": "index.js",
   "repository": "https://github.com/DravenMainBTW/discord-polling-bot.git",
