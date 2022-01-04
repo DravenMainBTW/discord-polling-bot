@@ -42,8 +42,22 @@ const commands = [
     .setDescription("Closes the running poll"),
   new SlashCommandBuilder()
     .setName("viewpoll")
-    .setDescription("Views the current poll"),
-  new SlashCommandBuilder().setName("vote").setDescription("Votes in poll"),
+    .setDescription("Views the current poll")
+    .addBooleanOption((option) =>
+      option.setName("private").setDescription("Display only for you")
+    ),
+  new SlashCommandBuilder()
+    .setName("vote")
+    .setDescription("Votes in poll")
+    .addStringOption((option) =>
+      option.setName("vote_1").setDescription("Title for vote 1")
+    )
+    .addStringOption((option) =>
+      option.setName("vote_2").setDescription("Title for vote 2")
+    )
+    .addStringOption((option) =>
+      option.setName("vote_3").setDescription("Title for vote 3")
+    ),
 ];
 
 const rest = new REST({ version: "9" }).setToken(CONFIG.DISCORD_TOKEN);

@@ -39,7 +39,11 @@ client.on("interactionCreate", async (interaction) => {
 
           current_poll = poll_list;
 
-          interaction.reply("Poll Created");
+          interaction.reply(
+            `@everyone A New Poll Has Been Created:${poll_list.map(
+              (item, index) => `\n${index + 1}. ${item.title}`
+            )}`
+          );
         } else {
           interaction.reply(
             "Please close the existing poll before starting a new one."
@@ -56,7 +60,11 @@ client.on("interactionCreate", async (interaction) => {
             }
           });
 
-          interaction.reply(`POLL CLOSED, WINNER: ${winner}`);
+          if (winner !== "") {
+            interaction.reply(`POLL CLOSED, WINNER: ${winner}`);
+          } else {
+            interaction.reply(`POLL CLOSED, NO WINNER`);
+          }
 
           current_poll = [];
         } else {
@@ -66,6 +74,15 @@ client.on("interactionCreate", async (interaction) => {
         }
       } else if (commandName === "viewpoll") {
         if (current_poll.length !== 0) {
+          const private_bool = interaction.options.getBoolean(`private`);
+
+          interaction.reply({
+            content: `Current Poll:${current_poll.map(
+              (item, index) =>
+                `\n${index + 1}. ${item.title} - ${item.votes.length}`
+            )}`,
+            ephemeral: private_bool ? true : false,
+          });
         } else {
           interaction.reply("Please create a poll before you try to view one.");
         }
