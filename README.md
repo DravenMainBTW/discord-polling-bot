@@ -1,5 +1,5 @@
 # Discord Polling Bot
-Discord bot made with JavaScript And MongoDB that allows owner to create multi option polls.
+Discord bot made with JavaScript and MongoDB that allows owner to create multi option polls.
 
 # Download
 ```
