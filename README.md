@@ -3,7 +3,7 @@ Discord bot made with JavaScript and MongoDB that allows owner to create multi o
 
 # Download
 ```
-git clone https://github.com/DravenMainBTW/discord-polling-bot.git
+git clone https://github.com/daniel-j-crewe/discord-polling-bot.git
 ```
 
 # Install And Setup
