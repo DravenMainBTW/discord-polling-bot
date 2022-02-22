@@ -5,15 +5,26 @@ Discord bot made with JavaScript and MongoDB that allows owner to create multi o
 ```
 git clone https://github.com/daniel-j-crewe/discord-polling-bot.git
 ```
-
-# Install And Setup
-**Note 1:** I am hosting this on Heroku but can quite easily be hosted on other platform. 
+# Pre Install Notes
+**Note 1:** I am hosting this on Heroku but can quite easily be hosted on other platform or just ran locally if that is all that is required.
 
 **Note 2:** This install assumes you are using yarn, if you are instead using NPM look up their verion of the commands.
 
-**Note 3:** This install assumes you have a basic understand of Discord.js, MongoDB and JavaScript as I will not be explaining the basics of how to create a discord bot, this merely shows how to get the code up and working.
+**Note 3:** This install assumes you have an understand of Discord bots, MongoDB and JavaScript as I will not be explaining the basics, this merely shows how to get the code up and working.
 
+# Install And Setup
+This install and setup is split into two sections, the first explaining what needs to be done with regards to discord and the second explaing how to get the code itself running.
 
+## Discord Setup
+You will need to log on to the [Discord Developer Portal](https://discord.com/developers/applications) and create an application and then a bot within that. After invite the bot to your desired Discord server using this link:  
+  
+```
+https://discord.com/api/oauth2/authorize?client_id=[YOUR_APP_ID]&permissions=67584&scope=applications.commands%20bot
+```
+
+Replacing `[YOUR_APP_ID]` with the application ID that is displayed under the "General Information" tab of your app.
+
+## Code Setup
 Once you have downloaded the repo and opened it in your code editor of choice run:
 ```
 yarn install
