@@ -4,6 +4,7 @@ import { Routes } from "discord-api-types/v9";
 import CONFIG from "./config_variables.js";
 
 const commands = [
+  // Adding command for creating poll
   new SlashCommandBuilder()
     .setName("createpoll")
     .setDescription("Creates a new poll")
@@ -37,15 +38,18 @@ const commands = [
     .addStringOption((option) =>
       option.setName("option_10").setDescription("Title for option 10")
     ),
+  // Adding command for closing poll
   new SlashCommandBuilder()
     .setName("closepoll")
     .setDescription("Closes the running poll"),
+  // Adding command for viewing poll
   new SlashCommandBuilder()
     .setName("viewpoll")
     .setDescription("Views the current poll")
     .addBooleanOption((option) =>
       option.setName("private").setDescription("Display only for you")
     ),
+  // Adding command for voting in poll
   new SlashCommandBuilder()
     .setName("vote")
     .setDescription("Votes in poll")
@@ -60,6 +64,7 @@ const commands = [
     ),
 ];
 
+// Registering commands to the discord server
 const rest = new REST({ version: "9" }).setToken(CONFIG.DISCORD_TOKEN);
 
 rest

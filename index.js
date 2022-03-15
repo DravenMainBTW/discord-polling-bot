@@ -51,7 +51,9 @@ client.on("interactionCreate", async (interaction) => {
   if (interaction.isCommand()) {
     const { commandName } = interaction;
 
+    // Permission check
     if (interaction.user.id.toString() === CONFIG.OWNER) {
+      // create / close and view poll command handling
       if (commandName === "createpoll") {
         if (current_poll.length === 0) {
           let poll_list = [];
@@ -127,6 +129,7 @@ client.on("interactionCreate", async (interaction) => {
       );
     }
 
+    // Voting command handling
     if (commandName === "vote") {
       if (current_poll && current_poll.length > 0) {
         let vote_list = [];
